@@ -7,20 +7,20 @@ public final class FocusedGrid<A>: FocusedGridOf<A> {
     let focus: (x: Int, y: Int)
     let grid: [[A]]
     
-    static func fix(_ value: FocusedGridOf<A>) -> FocusedGrid<A> {
+    public static func fix(_ value: FocusedGridOf<A>) -> FocusedGrid<A> {
         value as! FocusedGrid<A>
     }
     
-    init(focus: (x: Int, y: Int), grid: [[A]]) {
+    public init(focus: (x: Int, y: Int), grid: [[A]]) {
         self.focus = focus
         self.grid = grid
     }
     
-    subscript(at: (Int, Int)) -> A {
+    public subscript(at: (Int, Int)) -> A {
         self[at.0, at.1]
     }
     
-    subscript(x: Int, y: Int) -> A {
+    public subscript(x: Int, y: Int) -> A {
         let x = (x + grid.count) % grid.count
         let y = (y + grid[x].count) % grid[x].count
         return grid[x][y]
@@ -51,5 +51,11 @@ extension ForFocusedGrid: Comonad {
     
     public static func extract<A>(_ fa: Kind<ForFocusedGrid, A>) -> A {
         (fa^)[fa^.focus]
+    }
+}
+
+extension ForFocusedGrid: EquatableK {
+    public static func eq<A: Equatable>(_ lhs: Kind<ForFocusedGrid, A>, _ rhs: Kind<ForFocusedGrid, A>) -> Bool {
+        lhs^.grid == rhs^.grid
     }
 }
