@@ -15,6 +15,7 @@
 		114C7D26237BFAB400E24C8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114C7D24237BFAB400E24C8A /* LaunchScreen.storyboard */; };
 		114C7D31237BFAB400E24C8A /* ConwayGameOfLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C7D30237BFAB400E24C8A /* ConwayGameOfLifeTests.swift */; };
 		114C7D3F237BFB9000E24C8A /* Bow in Frameworks */ = {isa = PBXBuildFile; productRef = 114C7D3E237BFB9000E24C8A /* Bow */; };
+		114C7D41237BFBAF00E24C8A /* FocusedGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C7D40237BFBAF00E24C8A /* FocusedGrid.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 		114C7D2C237BFAB400E24C8A /* ConwayGameOfLifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConwayGameOfLifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		114C7D30237BFAB400E24C8A /* ConwayGameOfLifeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConwayGameOfLifeTests.swift; sourceTree = "<group>"; };
 		114C7D32237BFAB400E24C8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		114C7D40237BFBAF00E24C8A /* FocusedGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedGrid.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				114C7D27237BFAB400E24C8A /* Info.plist */,
 				114C7D19237BFAB300E24C8A /* AppDelegate.swift */,
 				114C7D1D237BFAB300E24C8A /* ContentView.swift */,
+				114C7D40237BFBAF00E24C8A /* FocusedGrid.swift */,
 				114C7D1B237BFAB300E24C8A /* SceneDelegate.swift */,
 				114C7D1F237BFAB400E24C8A /* Assets.xcassets */,
 				114C7D24237BFAB400E24C8A /* LaunchScreen.storyboard */,
@@ -219,6 +222,7 @@
 				114C7D1A237BFAB300E24C8A /* AppDelegate.swift in Sources */,
 				114C7D1C237BFAB300E24C8A /* SceneDelegate.swift in Sources */,
 				114C7D1E237BFAB300E24C8A /* ContentView.swift in Sources */,
+				114C7D41237BFBAF00E24C8A /* FocusedGrid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
