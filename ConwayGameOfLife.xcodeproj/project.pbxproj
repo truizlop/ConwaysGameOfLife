@@ -13,9 +13,12 @@
 		114C7D20237BFAB400E24C8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114C7D1F237BFAB400E24C8A /* Assets.xcassets */; };
 		114C7D23237BFAB400E24C8A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114C7D22237BFAB400E24C8A /* Preview Assets.xcassets */; };
 		114C7D26237BFAB400E24C8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114C7D24237BFAB400E24C8A /* LaunchScreen.storyboard */; };
-		114C7D31237BFAB400E24C8A /* ConwayGameOfLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C7D30237BFAB400E24C8A /* ConwayGameOfLifeTests.swift */; };
 		114C7D3F237BFB9000E24C8A /* Bow in Frameworks */ = {isa = PBXBuildFile; productRef = 114C7D3E237BFB9000E24C8A /* Bow */; };
 		114C7D41237BFBAF00E24C8A /* FocusedGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C7D40237BFBAF00E24C8A /* FocusedGrid.swift */; };
+		114C7D45237C047500E24C8A /* FocusedGridTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C7D44237C047500E24C8A /* FocusedGridTests.swift */; };
+		114C7D4D237C07AC00E24C8A /* BowGenerators in Frameworks */ = {isa = PBXBuildFile; productRef = 114C7D4C237C07AC00E24C8A /* BowGenerators */; };
+		114C7D4F237C07AC00E24C8A /* BowLaws in Frameworks */ = {isa = PBXBuildFile; productRef = 114C7D4E237C07AC00E24C8A /* BowLaws */; };
+		114C7D51237C07AC00E24C8A /* SwiftCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 114C7D50237C07AC00E24C8A /* SwiftCheck */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +41,9 @@
 		114C7D25237BFAB400E24C8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		114C7D27237BFAB400E24C8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		114C7D2C237BFAB400E24C8A /* ConwayGameOfLifeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConwayGameOfLifeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		114C7D30237BFAB400E24C8A /* ConwayGameOfLifeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConwayGameOfLifeTests.swift; sourceTree = "<group>"; };
 		114C7D32237BFAB400E24C8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		114C7D40237BFBAF00E24C8A /* FocusedGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedGrid.swift; sourceTree = "<group>"; };
+		114C7D44237C047500E24C8A /* FocusedGridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedGridTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				114C7D51237C07AC00E24C8A /* SwiftCheck in Frameworks */,
+				114C7D4F237C07AC00E24C8A /* BowLaws in Frameworks */,
+				114C7D4D237C07AC00E24C8A /* BowGenerators in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +74,7 @@
 				114C7D18237BFAB300E24C8A /* ConwayGameOfLife */,
 				114C7D2F237BFAB400E24C8A /* ConwayGameOfLifeTests */,
 				114C7D17237BFAB300E24C8A /* Products */,
+				114C7D4B237C07AC00E24C8A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -106,10 +113,17 @@
 		114C7D2F237BFAB400E24C8A /* ConwayGameOfLifeTests */ = {
 			isa = PBXGroup;
 			children = (
-				114C7D30237BFAB400E24C8A /* ConwayGameOfLifeTests.swift */,
 				114C7D32237BFAB400E24C8A /* Info.plist */,
+				114C7D44237C047500E24C8A /* FocusedGridTests.swift */,
 			);
 			path = ConwayGameOfLifeTests;
+			sourceTree = "<group>";
+		};
+		114C7D4B237C07AC00E24C8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,10 +160,14 @@
 			buildRules = (
 			);
 			dependencies = (
-				114C7D43237C045500E24C8A /* PBXTargetDependency */,
 				114C7D2E237BFAB400E24C8A /* PBXTargetDependency */,
 			);
 			name = ConwayGameOfLifeTests;
+			packageProductDependencies = (
+				114C7D4C237C07AC00E24C8A /* BowGenerators */,
+				114C7D4E237C07AC00E24C8A /* BowLaws */,
+				114C7D50237C07AC00E24C8A /* SwiftCheck */,
+			);
 			productName = ConwayGameOfLifeTests;
 			productReference = 114C7D2C237BFAB400E24C8A /* ConwayGameOfLifeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -184,6 +202,7 @@
 			mainGroup = 114C7D0D237BFAB300E24C8A;
 			packageReferences = (
 				114C7D3D237BFB9000E24C8A /* XCRemoteSwiftPackageReference "bow" */,
+				114C7D48237C078D00E24C8A /* XCRemoteSwiftPackageReference "SwiftCheck" */,
 			);
 			productRefGroup = 114C7D17237BFAB300E24C8A /* Products */;
 			projectDirPath = "";
@@ -231,7 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				114C7D31237BFAB400E24C8A /* ConwayGameOfLifeTests.swift in Sources */,
+				114C7D45237C047500E24C8A /* FocusedGridTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,10 +261,6 @@
 			isa = PBXTargetDependency;
 			target = 114C7D15237BFAB300E24C8A /* ConwayGameOfLife */;
 			targetProxy = 114C7D2D237BFAB400E24C8A /* PBXContainerItemProxy */;
-		};
-		114C7D43237C045500E24C8A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			productRef = 114C7D42237C045500E24C8A /* BowLaws */;
 		};
 /* End PBXTargetDependency section */
 
@@ -496,6 +511,14 @@
 				minimumVersion = 0.6.0;
 			};
 		};
+		114C7D48237C078D00E24C8A /* XCRemoteSwiftPackageReference "SwiftCheck" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/typelift/SwiftCheck/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.12.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -504,10 +527,20 @@
 			package = 114C7D3D237BFB9000E24C8A /* XCRemoteSwiftPackageReference "bow" */;
 			productName = Bow;
 		};
-		114C7D42237C045500E24C8A /* BowLaws */ = {
+		114C7D4C237C07AC00E24C8A /* BowGenerators */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 114C7D3D237BFB9000E24C8A /* XCRemoteSwiftPackageReference "bow" */;
+			productName = BowGenerators;
+		};
+		114C7D4E237C07AC00E24C8A /* BowLaws */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 114C7D3D237BFB9000E24C8A /* XCRemoteSwiftPackageReference "bow" */;
 			productName = BowLaws;
+		};
+		114C7D50237C07AC00E24C8A /* SwiftCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 114C7D48237C078D00E24C8A /* XCRemoteSwiftPackageReference "SwiftCheck" */;
+			productName = SwiftCheck;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

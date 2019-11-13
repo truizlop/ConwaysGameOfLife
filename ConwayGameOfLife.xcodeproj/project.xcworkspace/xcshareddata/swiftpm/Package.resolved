@@ -57,7 +57,7 @@
       },
       {
         "package": "SwiftCheck",
-        "repositoryURL": "https://github.com/typelift/SwiftCheck.git",
+        "repositoryURL": "https://github.com/typelift/SwiftCheck/",
         "state": {
           "branch": null,
           "revision": "077c096c3ddfc38db223ac8e525ad16ffb987138",
