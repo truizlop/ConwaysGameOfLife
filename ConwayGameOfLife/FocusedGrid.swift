@@ -37,3 +37,19 @@ extension ForFocusedGrid: Functor {
                     grid: fa^.grid.map { row in row.map(f) })
     }
 }
+
+extension ForFocusedGrid: Comonad {
+    public static func coflatMap<A, B>(_ fa: Kind<ForFocusedGrid, A>, _ f: @escaping (Kind<ForFocusedGrid, A>) -> B) -> Kind<ForFocusedGrid, B> {
+        let grid = fa^.grid.enumerated().map { x in
+            x.element.enumerated().map { y in
+                FocusedGrid(focus: (x.offset, y.offset),
+                            grid: fa^.grid)
+            }
+        }
+        return FocusedGrid(focus: fa^.focus, grid: grid).map(f)
+    }
+    
+    public static func extract<A>(_ fa: Kind<ForFocusedGrid, A>) -> A {
+        (fa^)[fa^.focus]
+    }
+}
