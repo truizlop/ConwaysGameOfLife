@@ -20,6 +20,11 @@
 		114C7D4F237C07AC00E24C8A /* BowLaws in Frameworks */ = {isa = PBXBuildFile; productRef = 114C7D4E237C07AC00E24C8A /* BowLaws */; };
 		114C7D51237C07AC00E24C8A /* SwiftCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 114C7D50237C07AC00E24C8A /* SwiftCheck */; };
 		114C7D53237C116500E24C8A /* GameOfLife.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C7D52237C116500E24C8A /* GameOfLife.swift */; };
+		11611B9A237C21C700031657 /* BowOptics in Frameworks */ = {isa = PBXBuildFile; productRef = 11611B99237C21C700031657 /* BowOptics */; };
+		11611B9C237C29A800031657 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11611B9B237C29A800031657 /* Cell.swift */; };
+		11611B9E237C2B9500031657 /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11611B9D237C2B9500031657 /* Pattern.swift */; };
+		11611BA0237C2C8800031657 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11611B9F237C2C8800031657 /* Store.swift */; };
+		11611BA2237C2D2400031657 /* Reducers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11611BA1237C2D2400031657 /* Reducers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +51,10 @@
 		114C7D40237BFBAF00E24C8A /* FocusedGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedGrid.swift; sourceTree = "<group>"; };
 		114C7D44237C047500E24C8A /* FocusedGridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedGridTests.swift; sourceTree = "<group>"; };
 		114C7D52237C116500E24C8A /* GameOfLife.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOfLife.swift; sourceTree = "<group>"; };
+		11611B9B237C29A800031657 /* Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
+		11611B9D237C2B9500031657 /* Pattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pattern.swift; sourceTree = "<group>"; };
+		11611B9F237C2C8800031657 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		11611BA1237C2D2400031657 /* Reducers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11611B9A237C21C700031657 /* BowOptics in Frameworks */,
 				114C7D3F237BFB9000E24C8A /* Bow in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -94,10 +104,14 @@
 			children = (
 				114C7D27237BFAB400E24C8A /* Info.plist */,
 				114C7D19237BFAB300E24C8A /* AppDelegate.swift */,
+				11611B9B237C29A800031657 /* Cell.swift */,
 				114C7D1D237BFAB300E24C8A /* ContentView.swift */,
 				114C7D40237BFBAF00E24C8A /* FocusedGrid.swift */,
 				114C7D52237C116500E24C8A /* GameOfLife.swift */,
+				11611B9D237C2B9500031657 /* Pattern.swift */,
+				11611BA1237C2D2400031657 /* Reducers.swift */,
 				114C7D1B237BFAB300E24C8A /* SceneDelegate.swift */,
+				11611B9F237C2C8800031657 /* Store.swift */,
 				114C7D1F237BFAB400E24C8A /* Assets.xcassets */,
 				114C7D24237BFAB400E24C8A /* LaunchScreen.storyboard */,
 				114C7D21237BFAB400E24C8A /* Preview Content */,
@@ -147,6 +161,7 @@
 			name = ConwayGameOfLife;
 			packageProductDependencies = (
 				114C7D3E237BFB9000E24C8A /* Bow */,
+				11611B99237C21C700031657 /* BowOptics */,
 			);
 			productName = ConwayGameOfLife;
 			productReference = 114C7D16237BFAB300E24C8A /* ConwayGameOfLife.app */;
@@ -245,8 +260,12 @@
 				114C7D53237C116500E24C8A /* GameOfLife.swift in Sources */,
 				114C7D1A237BFAB300E24C8A /* AppDelegate.swift in Sources */,
 				114C7D1C237BFAB300E24C8A /* SceneDelegate.swift in Sources */,
+				11611BA0237C2C8800031657 /* Store.swift in Sources */,
 				114C7D1E237BFAB300E24C8A /* ContentView.swift in Sources */,
 				114C7D41237BFBAF00E24C8A /* FocusedGrid.swift in Sources */,
+				11611BA2237C2D2400031657 /* Reducers.swift in Sources */,
+				11611B9E237C2B9500031657 /* Pattern.swift in Sources */,
+				11611B9C237C29A800031657 /* Cell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -545,6 +564,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 114C7D48237C078D00E24C8A /* XCRemoteSwiftPackageReference "SwiftCheck" */;
 			productName = SwiftCheck;
+		};
+		11611B99237C21C700031657 /* BowOptics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 114C7D3D237BFB9000E24C8A /* XCRemoteSwiftPackageReference "bow" */;
+			productName = BowOptics;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
