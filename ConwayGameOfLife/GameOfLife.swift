@@ -10,7 +10,15 @@ extension FocusedGrid where A: Monoid {
     }
 }
 
-public func conwayStep(_ grid: FocusedGridOf<Int>) -> Int {
+public func gameOfLife(_ state: [[Cell]]) -> [[Cell]] {
+    FocusedGrid(focus: (0, 0), grid: state)
+        .map(cellToInt)
+        .coflatMap(conwayStep)
+        .map(intToCell)^
+        .grid
+}
+
+private func conwayStep(_ grid: FocusedGridOf<Int>) -> Int {
     let liveNeighbors = grid^.localSum()
     let live = (grid^)[grid^.focus]
     
@@ -19,4 +27,15 @@ public func conwayStep(_ grid: FocusedGridOf<Int>) -> Int {
     } else {
         return (liveNeighbors == 3) ? 1 : 0
     }
+}
+
+private func cellToInt(_ cell: Cell) -> Int {
+    switch cell {
+    case .dead: return 0
+    case .alive: return 1
+    }
+}
+
+private func intToCell(_ int: Int) -> Cell {
+    int == 0 ? .dead : .alive
 }
