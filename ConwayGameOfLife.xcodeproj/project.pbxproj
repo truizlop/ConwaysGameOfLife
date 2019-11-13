@@ -146,6 +146,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				114C7D43237C045500E24C8A /* PBXTargetDependency */,
 				114C7D2E237BFAB400E24C8A /* PBXTargetDependency */,
 			);
 			name = ConwayGameOfLifeTests;
@@ -241,6 +242,10 @@
 			isa = PBXTargetDependency;
 			target = 114C7D15237BFAB300E24C8A /* ConwayGameOfLife */;
 			targetProxy = 114C7D2D237BFAB400E24C8A /* PBXContainerItemProxy */;
+		};
+		114C7D43237C045500E24C8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 114C7D42237C045500E24C8A /* BowLaws */;
 		};
 /* End PBXTargetDependency section */
 
@@ -498,6 +503,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 114C7D3D237BFB9000E24C8A /* XCRemoteSwiftPackageReference "bow" */;
 			productName = Bow;
+		};
+		114C7D42237C045500E24C8A /* BowLaws */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 114C7D3D237BFB9000E24C8A /* XCRemoteSwiftPackageReference "bow" */;
+			productName = BowLaws;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
