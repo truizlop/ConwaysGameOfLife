@@ -19,6 +19,7 @@
 		114C7D4D237C07AC00E24C8A /* BowGenerators in Frameworks */ = {isa = PBXBuildFile; productRef = 114C7D4C237C07AC00E24C8A /* BowGenerators */; };
 		114C7D4F237C07AC00E24C8A /* BowLaws in Frameworks */ = {isa = PBXBuildFile; productRef = 114C7D4E237C07AC00E24C8A /* BowLaws */; };
 		114C7D51237C07AC00E24C8A /* SwiftCheck in Frameworks */ = {isa = PBXBuildFile; productRef = 114C7D50237C07AC00E24C8A /* SwiftCheck */; };
+		114C7D53237C116500E24C8A /* GameOfLife.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C7D52237C116500E24C8A /* GameOfLife.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		114C7D32237BFAB400E24C8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		114C7D40237BFBAF00E24C8A /* FocusedGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedGrid.swift; sourceTree = "<group>"; };
 		114C7D44237C047500E24C8A /* FocusedGridTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusedGridTests.swift; sourceTree = "<group>"; };
+		114C7D52237C116500E24C8A /* GameOfLife.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOfLife.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				114C7D19237BFAB300E24C8A /* AppDelegate.swift */,
 				114C7D1D237BFAB300E24C8A /* ContentView.swift */,
 				114C7D40237BFBAF00E24C8A /* FocusedGrid.swift */,
+				114C7D52237C116500E24C8A /* GameOfLife.swift */,
 				114C7D1B237BFAB300E24C8A /* SceneDelegate.swift */,
 				114C7D1F237BFAB400E24C8A /* Assets.xcassets */,
 				114C7D24237BFAB400E24C8A /* LaunchScreen.storyboard */,
@@ -239,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				114C7D53237C116500E24C8A /* GameOfLife.swift in Sources */,
 				114C7D1A237BFAB300E24C8A /* AppDelegate.swift in Sources */,
 				114C7D1C237BFAB300E24C8A /* SceneDelegate.swift in Sources */,
 				114C7D1E237BFAB300E24C8A /* ContentView.swift in Sources */,
