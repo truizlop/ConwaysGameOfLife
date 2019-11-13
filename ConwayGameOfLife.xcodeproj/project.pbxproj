@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		114C7D23237BFAB400E24C8A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 114C7D22237BFAB400E24C8A /* Preview Assets.xcassets */; };
 		114C7D26237BFAB400E24C8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 114C7D24237BFAB400E24C8A /* LaunchScreen.storyboard */; };
 		114C7D31237BFAB400E24C8A /* ConwayGameOfLifeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 114C7D30237BFAB400E24C8A /* ConwayGameOfLifeTests.swift */; };
+		114C7D3F237BFB9000E24C8A /* Bow in Frameworks */ = {isa = PBXBuildFile; productRef = 114C7D3E237BFB9000E24C8A /* Bow */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				114C7D3F237BFB9000E24C8A /* Bow in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,12 +81,12 @@
 		114C7D18237BFAB300E24C8A /* ConwayGameOfLife */ = {
 			isa = PBXGroup;
 			children = (
+				114C7D27237BFAB400E24C8A /* Info.plist */,
 				114C7D19237BFAB300E24C8A /* AppDelegate.swift */,
-				114C7D1B237BFAB300E24C8A /* SceneDelegate.swift */,
 				114C7D1D237BFAB300E24C8A /* ContentView.swift */,
+				114C7D1B237BFAB300E24C8A /* SceneDelegate.swift */,
 				114C7D1F237BFAB400E24C8A /* Assets.xcassets */,
 				114C7D24237BFAB400E24C8A /* LaunchScreen.storyboard */,
-				114C7D27237BFAB400E24C8A /* Info.plist */,
 				114C7D21237BFAB400E24C8A /* Preview Content */,
 			);
 			path = ConwayGameOfLife;
@@ -123,6 +125,9 @@
 			dependencies = (
 			);
 			name = ConwayGameOfLife;
+			packageProductDependencies = (
+				114C7D3E237BFB9000E24C8A /* Bow */,
+			);
 			productName = ConwayGameOfLife;
 			productReference = 114C7D16237BFAB300E24C8A /* ConwayGameOfLife.app */;
 			productType = "com.apple.product-type.application";
@@ -173,6 +178,9 @@
 				Base,
 			);
 			mainGroup = 114C7D0D237BFAB300E24C8A;
+			packageReferences = (
+				114C7D3D237BFB9000E24C8A /* XCRemoteSwiftPackageReference "bow" */,
+			);
 			productRefGroup = 114C7D17237BFAB300E24C8A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -469,6 +477,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		114C7D3D237BFB9000E24C8A /* XCRemoteSwiftPackageReference "bow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/bow-swift/bow.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		114C7D3E237BFB9000E24C8A /* Bow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 114C7D3D237BFB9000E24C8A /* XCRemoteSwiftPackageReference "bow" */;
+			productName = Bow;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 114C7D0E237BFAB300E24C8A /* Project object */;
 }
