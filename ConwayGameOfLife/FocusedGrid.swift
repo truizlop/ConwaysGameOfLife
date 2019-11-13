@@ -30,3 +30,10 @@ public final class FocusedGrid<A>: FocusedGridOf<A> {
 public postfix func ^<A>(_ value: FocusedGridOf<A>) -> FocusedGrid<A> {
     FocusedGrid.fix(value)
 }
+
+extension ForFocusedGrid: Functor {
+    public static func map<A, B>(_ fa: Kind<ForFocusedGrid, A>, _ f: @escaping (A) -> B) -> Kind<ForFocusedGrid, B> {
+        FocusedGrid(focus: fa^.focus,
+                    grid: fa^.grid.map { row in row.map(f) })
+    }
+}
