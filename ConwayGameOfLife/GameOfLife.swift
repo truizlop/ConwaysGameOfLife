@@ -20,7 +20,7 @@ public func gameOfLife(_ state: [[Cell]]) -> [[Cell]] {
 
 private func conwayStep(_ grid: FocusedGridOf<Int>) -> Int {
     let liveNeighbors = grid^.localSum()
-    let live = (grid^)[grid^.focus]
+    let live = grid.extract()
     
     if live == 1 {
         return (liveNeighbors >= 2 && liveNeighbors <= 3) ? 1 : 0

@@ -9,7 +9,7 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 Spacer()
-                grid
+                grid(store.state)
                 Spacer()
                 startStopButton
             }.navigationBarTitle("Conway's Game of Life")
@@ -20,13 +20,12 @@ struct ContentView: View {
         }
     }
     
-    var grid: some View {
+    func grid(_ cells: [[Cell]]) -> some View {
         VStack {
-            ForEach(store.state, id: \.self) { row in
+            ForEach(cells, id: \.self) { row in
                 HStack {
                     ForEach(row, id: \.self) { cell in
-                        Text(cell.description)
-                            .font(.title)
+                        Text(cell.description).font(.title)
                     }
                 }
             }
