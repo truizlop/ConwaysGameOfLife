@@ -18,11 +18,11 @@ public func gameOfLife(_ state: [[Cell]]) -> [[Cell]] {
         .grid
 }
 
-private func conwayStep(_ grid: FocusedGridOf<Int>) -> Int {
+public func conwayStep(_ grid: FocusedGridOf<Int>) -> Int {
     let liveNeighbors = grid^.localSum()
-    let live = grid.extract()
+    let cell = grid.extract()
     
-    if live == 1 {
+    if cell == 1 {
         return (liveNeighbors >= 2 && liveNeighbors <= 3) ? 1 : 0
     } else {
         return (liveNeighbors == 3) ? 1 : 0
