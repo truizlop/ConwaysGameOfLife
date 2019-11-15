@@ -24,31 +24,31 @@ class GameOfLifeTests: XCTestCase {
 }
 
 func aliveWith2or3AliveNeighbors() -> Gen<FocusedGrid<Int>> {
-    Gen.one(of: [alive(withNeighbors: 2),
-                 alive(withNeighbors: 3)])
+    Gen.one(of: [alive(withAliveNeighbors: 2),
+                 alive(withAliveNeighbors: 3)])
 }
 
 func aliveWithOtherAliveNeighbors() -> Gen<FocusedGrid<Int>> {
-    Gen.one(of: [0, 1, 4, 5, 6, 7, 8].map { n in alive(withNeighbors: n) })
+    Gen.one(of: [0, 1, 4, 5, 6, 7, 8].map { n in alive(withAliveNeighbors: n) })
 }
 
 func deadWith3AliveNeighbors() -> Gen<FocusedGrid<Int>> {
-    dead(withNeighbors: 3)
+    dead(withAliveNeighbors: 3)
 }
 
 func deadWithOtherNumberOfAliveNeighbors() -> Gen<FocusedGrid<Int>> {
-    Gen.one(of: [0, 1, 2, 4, 5, 6, 7, 8].map { n in dead(withNeighbors: n) } )
+    Gen.one(of: [0, 1, 2, 4, 5, 6, 7, 8].map { n in dead(withAliveNeighbors: n) } )
 }
 
-func alive(withNeighbors n: Int) -> Gen<FocusedGrid<Int>> {
-    grid(center: 1, withNeighbors: n)
+func alive(withAliveNeighbors n: Int) -> Gen<FocusedGrid<Int>> {
+    grid(center: 1, withAliveNeighbors: n)
 }
 
-func dead(withNeighbors n: Int) -> Gen<FocusedGrid<Int>> {
-    grid(center: 0, withNeighbors: n)
+func dead(withAliveNeighbors n: Int) -> Gen<FocusedGrid<Int>> {
+    grid(center: 0, withAliveNeighbors: n)
 }
 
-func grid(center: Int, withNeighbors n: Int) -> Gen<FocusedGrid<Int>> {
+func grid(center: Int, withAliveNeighbors n: Int) -> Gen<FocusedGrid<Int>> {
     let alive = Array(repeating: 1, count: n)
     let dead = Array(repeating: 0, count: 8 - n)
     let all = alive + dead
@@ -56,17 +56,13 @@ func grid(center: Int, withNeighbors n: Int) -> Gen<FocusedGrid<Int>> {
     return Gen.pure(()).map { all.shuffled() }
         .map { array in
             FocusedGrid(focus: (1, 1),
-                        grid: pack(center: center, neighbors: array)) }
+                        grid: toGrid(center: center, neighbors: array)) }
 }
 
-func pack(center: Int, neighbors x: [Int]) -> [[Int]] {
+func toGrid(center: Int, neighbors x: [Int]) -> [[Int]] {
     [
         [x[0], x[1], x[2]],
         [x[3], center, x[4]],
         [x[5], x[6], x[7]]
     ]
-}
-
-func boolToInt(_ ifTrue: Bool) -> Int {
-    ifTrue ? 1 : 0
 }
