@@ -20,6 +20,12 @@ extension ForFocusedGrid: ArbitraryK {
     }
 }
 
+extension FocusedGrid: Arbitrary where A: Arbitrary {
+    public static var arbitrary: Gen<FocusedGrid<A>> {
+        KindOf<ForFocusedGrid, A>.arbitrary.map { x in x.value^ }
+    }
+}
+
 class FocusedGridTests: XCTestCase {
     func testEquatableKLaws() {
         EquatableKLaws<ForFocusedGrid, Int>.check()
